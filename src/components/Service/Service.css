@@ -1,0 +1,185 @@
+.Service_Top_Wrap {
+  width: 55%;
+  margin: 0 auto 100px auto;
+  z-index: 1;
+  position: relative;
+}
+
+.ServiceWrap h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.selectServiceType button {
+  margin-right: 15px;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+
+#categoryTitle {
+  margin-top: 15px;
+}
+
+#fileUrl{
+  padding: 10px 0;
+}
+.selectServiceType {
+  margin-top: 20px;
+}
+
+#dateTitle {
+  margin-top: 30px;
+}
+
+.dateTitle {
+  width: 40%;
+}
+
+#applyContentTitle {
+  margin-top: 20px;
+}
+
+.applyContent_textarea {
+  margin-top: 10px;
+  width: 60%;
+  height: 300px;
+}
+
+#usimOk,
+#usimNo {
+  border: 0;
+  background-color: white;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.categoryBox {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.lastCategoryBoxWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.lastCategoryBox {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.categoryBtnWrap,
+.secondCategoryBtnWrap {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.carPriceCategoryWrap {
+  display: flex;
+  flex-direction: row;
+}
+
+.Service_Button_List {
+  list-style: none;
+  background-color: #ffb3ad;
+  margin-right: 10px;
+  padding: 7px 20px;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.categoryBox textarea {
+  margin-top: 5px;
+  height: 250px;
+  font-size: 17px;
+  border-radius: 17px;
+  border: 1px solid silver;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.apply_btn_wrap {
+  width: 55%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  padding: 15px 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #e0363f;
+  color: white;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.admin_btn_wrap {
+  margin: 30px auto 0 auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+}
+
+.admin_bt {
+  padding: 15px 0;
+  background-color: #e0363f;
+  color: white;
+}
+
+.deny_bt {
+  padding: 15px 0;
+  background-color: #ffd8d5;
+  color: white;
+}
+
+.Service_post_complete {
+  position: absolute;
+  top: 30vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.Service_post_complete img {
+  width: 280px;
+  height: 130px;
+}
+
+.Service_content_box {
+  border: 1px solid silver;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+input[type='number'] {
+  width: 100%;
+  border: none;
+  border-bottom: solid 1px #c2c2c2;
+  margin-bottom: 30px;
+}
+
+#usimOk,
+#usimNo {
+  cursor: pointer;
+}
+
+#usimOk.isSelected,
+#usimNo.isSelected {
+  color: #e0363f;
+}

@@ -1,0 +1,18 @@
+.post_btn_box {
+    width: 55%;
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    padding-bottom: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 0;
+    .post_plus_btn {
+      cursor: pointer;
+      height: 50px;
+      width: 50px;
+      z-index: -1;
+    }
+  }

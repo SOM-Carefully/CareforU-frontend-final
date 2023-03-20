@@ -1,0 +1,30 @@
+#Access-Btn{
+    width: 70%;
+    height: 50px;
+    margin: 30px auto 0px auto;
+    border-radius: 15px;
+    border: 0;
+    font-size: 23px;
+    font-weight: 500;
+    color: white;
+    background-color: #E0363F;
+    cursor: pointer;
+}
+
+.Access-Btn {
+    display: flex;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+label {
+    font-weight: 800;
+}
+
+#userinfo {
+    font-size: 15px;
+    font-weight: 500;
+}

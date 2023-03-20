@@ -1,0 +1,9 @@
+.notice_header_container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+
+  .text {
+    margin-bottom: 10px;
+  }
+}

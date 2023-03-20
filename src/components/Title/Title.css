@@ -1,0 +1,21 @@
+.Title{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(10vh);
+    margin: 30px auto 0 auto;
+}
+
+.Title img{
+    position: absolute;
+    left: 10%;
+    cursor: pointer;
+    width: 30px;
+}
+
+.Title h2{
+    font-size: 1.6rem;
+}

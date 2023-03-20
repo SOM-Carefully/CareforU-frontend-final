@@ -1,0 +1,78 @@
+#Signup-Btn{
+    width: 100%;
+    height: 55px;
+    margin: 30px auto 0px auto;
+    border-radius: 15px;
+    border: 0;
+    font-size: 23px;
+    font-weight: 500;
+    color: white;
+    background-color: #E0363F;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 20px;
+    color: #666666;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    border: none;
+    border-bottom: solid 1px #c2c2c2;
+    margin-bottom: 30px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+input[type="checkbox"] + label {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+    border-color: #666666;
+    color: #666666;
+}
+
+.AdminSignup-form{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+
+}
+
+#Accept-Btn {
+    width: 30%;
+    height: 55px;
+    margin: 30px auto 0px auto;
+    border-radius: 15px;
+    border: 0;
+    font-size: 23px;
+    font-weight: 500;
+    color: white;
+    background-color: #E0363F;
+    cursor: pointer;
+}
+#Reject-Btn {
+    width: 30%;
+    height: 55px;
+    margin: 30px auto 0px auto;
+    border-radius: 15px;
+    border: 0;
+    font-size: 23px;
+    font-weight: 500;
+    color: white;
+    background-color: #7d7d7d;
+    cursor: pointer;
+}

@@ -1,0 +1,31 @@
+.menu-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+}
+
+p {
+    font-weight: 600;
+}
+
+.menu-item {
+    padding: 0 5% 0 5%;
+}
+
+.menu-item p, .menu-item img{
+    cursor: pointer;
+}

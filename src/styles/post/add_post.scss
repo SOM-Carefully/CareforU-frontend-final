@@ -1,0 +1,65 @@
+.input_title_wrapper {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+
+    .input_title {
+        border-bottom: 1px solid #CECECE;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        width: 90vw;
+        height: 30px;
+
+    }
+}
+
+.input_content_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .input_content {
+        border-bottom: 0px;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        width: 90vw;
+        height: 65vh;
+        resize: none
+    }
+}
+
+.bottom_btn_wrapper {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    background-color: #eba3a3;
+
+    .camera_icon {
+        height: 8vh;
+        width: 50px;
+
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon {
+            width: 25px;
+            height: 25px;
+
+        }
+    }
+
+    .submit_btn {
+        width: 85vw;
+        text-align: center;
+        line-height: 8vh;
+        color: white;
+    }
+}
