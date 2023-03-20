@@ -19,7 +19,7 @@ const GeneralMyPage = () => {
 
     // 내가 쓴 글 페이지로 이동
     const onMoveLookList = (e) => {
-        navigate('/my_post_list');
+        navigate('/service_mine');
     }
 
     // 탈퇴 페이지로 이동
@@ -126,13 +126,13 @@ const GeneralMyPage = () => {
                 <div className="profile-service">
                     <h4>서비스 신청 설정</h4>
                     <p id="cursorNeed" onClick={onMoveLookList}>신청 내역 보기</p>
-                    <div className="profile-alarmWrap">
-                        <p>서비스 매칭 알림</p>
-                        <label class="switch">
-                            <input type="checkbox" />
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
+                    {/*<div className="profile-alarmWrap">*/}
+                    {/*    <p>서비스 매칭 알림</p>*/}
+                    {/*    <label class="switch">*/}
+                    {/*        <input type="checkbox" />*/}
+                    {/*        <span class="slider round"></span>*/}
+                    {/*    </label>*/}
+                    {/*</div>*/}
                 </div>
                 <div className="underBar"></div>
                 <div className="profile-user">
