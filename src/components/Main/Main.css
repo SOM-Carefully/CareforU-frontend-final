@@ -1,0 +1,17 @@
+#mainImg{
+    width: 55%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+.main_notice_wrap{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.main_free_wrap{
+    width: 60%;
+    margin: 30px auto 0 auto;
+}

@@ -1,0 +1,119 @@
+.bodyWrap{
+    width: 100vw;
+    height: 100vh;
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin: 150px auto 0px auto;
+}
+
+#welcomeText{
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+#inputText{
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+#loginEmail{
+    margin-top: 30px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid rgb(180, 180, 180);
+}
+
+#loginPw{
+
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid rgb(180, 180, 180);
+}
+
+#loginSubText{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #c2c2c2;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+#loginBt{
+    width: 20vw;
+    height: 55px;
+    margin: 40px auto 0px auto;
+    border-radius: 30px;
+    border: 0;
+    font-size: 23px;
+    font-weight: 500;
+    color: white;
+    background-color: #e64841;
+    cursor: pointer;
+}
+
+#signupBt{
+    width: 20vw;
+    height: 55px;
+    margin: 30px auto 0px auto;
+    border-radius: 30px;
+    border: 0;
+    font-size: 23px;
+    font-weight: 500;
+    color: white;
+    background-color: #e64841;
+    cursor: pointer;
+}
+
+#loginBt:hover, #signupBt:hover{
+    opacity: 0.7;
+}
+
+#loginEmail {
+    background-image: url('./../../img/user_email.png');
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    box-sizing: border-box;
+    background-position: 2px center;
+}
+
+#loginPw {
+    background-image: url('./../../img/user_password.png');
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    box-sizing: border-box;
+    background-position: 2px center;
+}
+
+#messengerBt{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#facebookLogo{
+    width: 70px; height: 43px;
+    padding-right: 10px;
+}
+
+#kakaoLogo, #googleLogo{
+    padding-top: 3px;
+    width: 40px; height: 38px;
+}
+
+#kakaoLogo{
+    padding-right: 25px;
+}
+

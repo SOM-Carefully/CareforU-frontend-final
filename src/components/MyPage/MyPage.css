@@ -1,0 +1,128 @@
+.profile-wrap{
+    width: 55%;
+    margin: 0px auto;
+}
+
+.profile-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-info img{
+    width: 55px;
+    height: 55px;
+}
+
+.profile-name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#logoutBt{
+    padding: 7px 15px;
+    background-color: #D94848;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.profile-info p{
+    font-size: 1.4em;
+    padding-left: 15px;
+}
+
+h4{
+    font-weight: larger;
+    font-size: 1.4em;
+    margin-top: 25px;
+}
+
+.underBar{
+    width: 100%;
+    height: 1px;
+    background-color: #CECECE;
+    margin-top: 10px;
+}
+
+.profile-alarmWrap{
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+
+.profile-alarmWrap p{
+    margin-top: 5px;
+}
+
+
+/* switch button css */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 15px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 28px;
+    width: 28px;
+    left: 5px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #D94848;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #D94848;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#cursorNeed{
+    cursor: pointer;
+}

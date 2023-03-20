@@ -1,0 +1,14 @@
+.search_box {
+  margin-left: -15px;
+  .search_input {
+    width: 240px;
+    height: 30px;
+    margin-left: 7px;
+    margin-right: -25px;
+    border: solid 1.9px black;
+    border-radius: 20px;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

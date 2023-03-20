@@ -1,0 +1,48 @@
+.Join{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    min-width: 375px;
+}
+
+.JoinTitleWrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(35vh);
+    width: 100%;
+    background-color: rgb(225, 37, 37);
+    color: white;
+    border-radius: 0px 0px 30px 30px;
+    box-shadow: 2px 5px 5px rgba(176, 176, 179, 0.959);
+}
+
+.JoinTitleWrap h2{
+    font-size: 2.3rem;
+    margin-bottom: 0px;
+}
+
+.JoinTitleWrap p{
+    margin-top: 5px;
+}
+
+.JoinBodyWrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(65vh);
+}
+
+.JoinBodyWrap img{
+    width: 150px;
+    height: 150px;
+}
+
+.JoinBodyWrap p{
+    color: rgba(162, 162, 164, 0.959);
+}

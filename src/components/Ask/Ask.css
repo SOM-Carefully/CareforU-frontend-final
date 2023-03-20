@@ -1,0 +1,52 @@
+.ask-wrap{
+    width: 55%;
+    margin: 10px auto 0px auto;
+}
+
+.center-text{
+    display: flex;
+    flex-direction: row;
+}
+
+.admin-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #D9D9D9;
+}
+
+.admin-text{
+    padding: 0px 20px;
+    margin-left: 25px;
+    border-radius: 20px;
+    background-color: #D9D9D9;
+}
+
+.ask-input{
+    width: 55%;
+    display: grid;
+    grid-template-columns: 80% 10%;
+    position: fixed;
+    padding-bottom: 130px;
+    bottom: 0;
+}
+
+#askInput{
+    border: 1.5px solid rgb(170, 170, 170);
+    border-radius: 10px;
+    height: 20px;
+}
+
+.ask-input button{
+    width: 70px;
+    height: 38px;
+    margin-left: 15px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgb(217, 72, 72, 0.5);
+    font-weight: 700;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}

@@ -1,0 +1,17 @@
+.wrapper {
+  // position: fixed;
+  // bottom: 0;
+
+  .post_btn_box {
+    display: flex;
+    justify-content: end;
+
+    .post_btn {
+      height: 40px;
+      filter: drop-shadow(3px 3px 3px gray);
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+    }
+  }
+}

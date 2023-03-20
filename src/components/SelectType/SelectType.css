@@ -1,0 +1,75 @@
+.SelectType{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.SelectWrap{
+    height: calc(70vh);
+    flex-direction: column;
+}
+
+.SelectBtn {
+    flex-direction: column;
+}
+
+.SelectTitle{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.generalBtn, .operateBtn{
+    margin: 40px auto 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgb(238, 78, 78);
+    width: 50%;
+    padding: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.generalBtn {
+    background-image: url('./../../img/person.png');
+    background-repeat: no-repeat;
+    background-size: 50px;
+    box-sizing: border-box;
+    background-position: 35px center;
+    padding-left: 70px;
+}
+
+.operateBtn {
+    background-image: url('./../../img/operator.png');
+    background-repeat: no-repeat;
+    background-size: 50px;
+    box-sizing: border-box;
+    background-position: 35px center;
+    padding-left: 70px;
+}
+
+.generalBtn:hover, .operateBtn:hover{
+    opacity: 0.7;
+}
+
+.generalBtn img{
+    width: 30px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.operateBtn img{
+    width: 35px;
+    height: 35px;
+    padding-left: 10px;
+}
+
+.generalBtn p, .operateBtn p{
+    padding-top: 2px;
+    padding-left: 40px;
+    font-size: 1.5rem;
+    color: white;
+}
