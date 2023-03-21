@@ -7,9 +7,7 @@ import Notice_board from "./pages/Notice_board";
 import "./styles/common.scss";
 import Login from "./components/Login/Login";
 
-// line1 로그인페이지
-import Test from "./pages/line1/Test";
-import Modal from "./pages/line1/Modal";
+
 
 // line2
 import Home from "./pages/line2/home";
@@ -91,7 +89,7 @@ root.render(
       {/* line2 */}
       {/* <Route path="/" element={<Home />}></Route> */}
       <Route path="/apply_service" element={<Apply_service />}></Route>
-      <Route path="/test" element={<Test />}></Route>
+
       <Route path="/service_post" element={<Service_Post />}></Route>
       <Route path="/service_home" element={<Total_Service />}></Route>
       <Route path="/service_home_admin" element={<Admin_Service />}></Route>
@@ -138,9 +136,7 @@ root.render(
       {/* <Route path="/add_notice" element={<Add_notice />}></Route> */}
       <Route path="/apply_signup_list" element={<Apply_signup_list />}></Route>
 
-      {/* line1 로그인 페이지 */}
-      <Route path="/login1" element={<Test />}></Route>
-      <Route path="/login2" element={<Modal />}></Route>
+
 
       {/* line2 */}
       <Route path="/" element={<Home />}></Route>
@@ -158,7 +154,6 @@ root.render(
       <Route path="/line3_6" element={<Line3_6 />}></Route> */}
       {/* 기타 */}
 
-      <Route path="/test" element={<Test />}></Route>
       {/* NOTICE */}
       <Route path="/add_notice" element={<Add_notice />}></Route>
       <Route path="/notice_list" element={<Notice_list />}></Route>
