@@ -14,7 +14,7 @@ import Home from "./pages/line2/home";
 
 import Mypage1 from "./pages/line2/Mypage1";
 import Mypage2 from "./pages/line2/Mypage2";
-import My_post_list from "./pages/line2/My_post_list";
+
 
 // line3
 import Apply_signup_list from "./pages/line3/Apply_signup_list";
@@ -143,7 +143,7 @@ root.render(
 
       <Route path="/mypage1" element={<Mypage1 />}></Route>
       <Route path="/mypage2" element={<Mypage2 />}></Route>
-      <Route path="/my_post_list" element={<My_post_list />}></Route>
+  
       {/* line3 */}
       <Route path="/apply_signup_list" element={<Apply_signup_list />}></Route>
       <Route path="/line3_2" element={<Line3_2 />}></Route>
