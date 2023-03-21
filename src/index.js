@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Modify_post from "./pages/Modify_post";
-import Notice_board from "./pages/Notice_board";
+
 
 import "./styles/common.scss";
 import Login from "./components/Login/Login";
@@ -82,7 +82,7 @@ root.render(
     <Routes>
       <Route path="/board_list" element={<Board_lists />}></Route>
       <Route path="/add_post" element={<Add_post />}></Route>
-      <Route path="/notice_board" element={<Notice_board />}></Route>
+
       <Route path="/add_notice" element={<Add_notice />}></Route>
 
       {/*<Route path="/service_total" element={<Total_Service />}></Route>*/}
@@ -132,7 +132,6 @@ root.render(
 
       <Route path='/fileUpload' element={<FileUploader />}></Route>
 
-      <Route path="/notice_board" element={<Notice_board />}></Route>
       {/* <Route path="/add_notice" element={<Add_notice />}></Route> */}
       <Route path="/apply_signup_list" element={<Apply_signup_list />}></Route>
 
