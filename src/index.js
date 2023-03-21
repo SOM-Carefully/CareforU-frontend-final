@@ -16,7 +16,7 @@ import Home from "./pages/line2/home";
 
 
 // line3
-import Apply_signup_list from "./pages/line3/Apply_signup_list";
+
 import Line3_2 from "./pages/line3/Line3_2";
 import Question_list from "./pages/line3/Question_list";
 import Line3_4 from "./pages/line3/Line3_4";
@@ -131,8 +131,7 @@ root.render(
 
       <Route path='/fileUpload' element={<FileUploader />}></Route>
 
-      {/* <Route path="/add_notice" element={<Add_notice />}></Route> */}
-      <Route path="/apply_signup_list" element={<Apply_signup_list />}></Route>
+
 
 
 
@@ -143,7 +142,6 @@ root.render(
       
   
       {/* line3 */}
-      <Route path="/apply_signup_list" element={<Apply_signup_list />}></Route>
       <Route path="/line3_2" element={<Line3_2 />}></Route>
       <Route path="/question_list" element={<Question_list />}></Route>
       <Route path="/line3_4" element={<Line3_4 />}></Route>
