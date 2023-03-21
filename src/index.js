@@ -12,8 +12,7 @@ import Login from "./components/Login/Login";
 // line2
 import Home from "./pages/line2/home";
 
-import Mypage1 from "./pages/line2/Mypage1";
-import Mypage2 from "./pages/line2/Mypage2";
+
 
 
 // line3
@@ -141,8 +140,7 @@ root.render(
       <Route path="/" element={<Home />}></Route>
 
 
-      <Route path="/mypage1" element={<Mypage1 />}></Route>
-      <Route path="/mypage2" element={<Mypage2 />}></Route>
+      
   
       {/* line3 */}
       <Route path="/apply_signup_list" element={<Apply_signup_list />}></Route>
