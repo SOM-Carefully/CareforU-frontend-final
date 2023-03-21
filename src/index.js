@@ -11,7 +11,7 @@ import Login from "./components/Login/Login";
 
 // line2
 import Home from "./pages/line2/home";
-import Apply_service from "./pages/line2/Apply_service";
+
 import Mypage1 from "./pages/line2/Mypage1";
 import Mypage2 from "./pages/line2/Mypage2";
 import My_post_list from "./pages/line2/My_post_list";
@@ -88,7 +88,7 @@ root.render(
       {/*<Route path="/service_total" element={<Total_Service />}></Route>*/}
       {/* line2 */}
       {/* <Route path="/" element={<Home />}></Route> */}
-      <Route path="/apply_service" element={<Apply_service />}></Route>
+
 
       <Route path="/service_post" element={<Service_Post />}></Route>
       <Route path="/service_home" element={<Total_Service />}></Route>
@@ -139,7 +139,7 @@ root.render(
 
       {/* line2 */}
       <Route path="/" element={<Home />}></Route>
-      <Route path="/apply_service" element={<Apply_service />}></Route>
+
 
       <Route path="/mypage1" element={<Mypage1 />}></Route>
       <Route path="/mypage2" element={<Mypage2 />}></Route>
