@@ -15,11 +15,8 @@ import Home from "./pages/line2/home";
 
 
 
-// line3
 
-import Line3_2 from "./pages/line3/Line3_2";
-import Question_list from "./pages/line3/Question_list";
-import Line3_4 from "./pages/line3/Line3_4";
+
 
 import SelectType from "./components/SelectType/SelectType";
 
@@ -142,9 +139,9 @@ root.render(
       
   
       {/* line3 */}
-      <Route path="/line3_2" element={<Line3_2 />}></Route>
-      <Route path="/question_list" element={<Question_list />}></Route>
-      <Route path="/line3_4" element={<Line3_4 />}></Route>
+
+
+
       {/* <Route path="/line3_5" element={<Line3_5 />}></Route>
       <Route path="/line3_6" element={<Line3_6 />}></Route> */}
       {/* 기타 */}
