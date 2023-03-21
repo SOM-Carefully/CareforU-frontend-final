@@ -10,9 +10,7 @@ import Login from "./components/Login/Login";
 // line1 로그인페이지
 import Test from "./pages/line1/Test";
 import Modal from "./pages/line1/Modal";
-import Login4 from "./pages/line1/Login4";
-import Login5 from "./pages/line1/Login5";
-import Login6 from "./pages/line1/Login6";
+
 // line2
 import Home from "./pages/line2/home";
 import Apply_service from "./pages/line2/Apply_service";
@@ -143,10 +141,7 @@ root.render(
       {/* line1 로그인 페이지 */}
       <Route path="/login1" element={<Test />}></Route>
       <Route path="/login2" element={<Modal />}></Route>
-      {/* <Route path="/login3" element={<Login3 />}></Route> */}
-      <Route path="/login4" element={<Login4 />}></Route>
-      <Route path="/login5" element={<Login5 />}></Route>
-      <Route path="/login6" element={<Login6 />}></Route>
+
       {/* line2 */}
       <Route path="/" element={<Home />}></Route>
       <Route path="/apply_service" element={<Apply_service />}></Route>
