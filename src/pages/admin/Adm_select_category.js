@@ -35,7 +35,7 @@ function Adm_select_category() {
 
     useEffect(() => {
         Get()
-    }, [category_names]);
+    }, []);
 
     useEffect(() => {
         console.log("바뀜:" + openModal)

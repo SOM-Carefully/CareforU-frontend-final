@@ -35,32 +35,32 @@ function Select_category() {
 
     useEffect(() => {
         Get()
-    }, [category_names]);
+    }, []);
 
 
     return (
         <div>
             <Header />
             <div className="category_box">
-                <div className="category_menu" onClick={click_notice}>
+                {/* <div className="category_menu" onClick={click_notice}>
                     <div ><img className='icon' src="/pin.png"></img></div>
                     공지사항
                 </div>
                 <div className="category_menu" onClick={click_post}>
                     <img className='icon' src="/pin.png"></img>자유게시판
-                </div>
-                <ul>
+                </div> */}
+                {/* <ul> */}
                     {category_names === Object(category_names)
                         ? category_names.map((content, index) => (
-                            <li key={index}>
+                            <div key={index}>
                                 <Link to={`/board_list/${content.categoryId}`} style={{ textDecoration: 'none', color: "black" }}>
                                     <Category category_name={content.categoryName} />
                                 </Link>
 
-                            </li>
+                            </div>
                         ))
                         : ""}
-                </ul>
+                {/* </ul> */}
             </div>
 
         </div>
