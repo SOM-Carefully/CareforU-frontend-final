@@ -2,6 +2,7 @@ import { useState, React } from "react";
 import Comment from "../../components/Comment/Comment.js";
 import "./../../styles/post.scss"
 //87줄 댓글
+//post2 반영??
 
 function Post2(props){
     const [comment, setComment] = useState("");
