@@ -1,8 +1,8 @@
 import './Service.css';
 import axios from 'axios';
-import Board_header from "../Board_header2/Board_header";
+import Board_header2 from "../Board_header2/Board_header2";
 import Title from './../Title/Title';
-import Board_list from "../Board_list2/Board_list.js";
+import Board_list2 from "../Board_list2/Board_list2.js";
 import {React, useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 function My_Service(){
@@ -55,12 +55,12 @@ function My_Service(){
     return(
         <div className="Service_Top_Wrap">
             <Title title="내 서비스" />
-            <Board_header t1="번호" t2="글쓴이" t3="신청일" t4="상태"/>
+            <Board_header2 t1="번호" t2="글쓴이" t3="신청일" t4="상태"/>
             <ul>
                 {content===Object(content)
                     ? content.content.map((content, index) => (
                         <li key={index}onClick={e =>onMoveDetailServiceContent(content.bookingId, content.businessTypeResponse, e)} >
-                            <Board_list num={index+1} username={content.userUsername} posttime={content.createdAt[0] + '.' + content.createdAt[1] + '.' + content.createdAt[2]} status={content.bookingStatus == 'ACCEPT' ? '승인됨' : content.bookingStatus == 'WAITING' ? '대기중' : content.bookingStatus == 'CANCEL' ? '취소됨' : '완료'}/>
+                            <Board_list2 num={index+1} username={content.userUsername} posttime={content.createdAt[0] + '.' + content.createdAt[1] + '.' + content.createdAt[2]} status={content.bookingStatus == 'ACCEPT' ? '승인됨' : content.bookingStatus == 'WAITING' ? '대기중' : content.bookingStatus == 'CANCEL' ? '취소됨' : '완료'}/>
                         </li>
                     ))
                     : "등록된 글이 없습니다"}

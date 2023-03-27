@@ -30,7 +30,7 @@ const AdminMyPage = () => {
     const [users, setUsers] = useState([]);
     const [roles, setRoles] = useState([]);
     const [nicknames, setNicknames] = useState([]);
-    const [profileUrls, setProfileUrls] = useState([]);
+    const [profileUrls, setProfileUrls] = useState();
 
     const token = localStorage.getItem('accessToken');
     const refreshToken = localStorage.getItem('refreshToken');
@@ -101,7 +101,7 @@ const AdminMyPage = () => {
             <div className="profile-wrap">
                 <div className="profile-info">
                     <div className="profile-name">
-                        {profileUrls===null?<img src={profile}/>:<img src={{uri : profileUrls}}/>}
+                        {profileUrls===null?<img src={profile}/>:<img src={profileUrls}/>}
                         {nicknames===null?<p>{users} 님</p>:<p>{nicknames} 님</p>}
                     </div>
                     <div>

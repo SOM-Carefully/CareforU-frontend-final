@@ -11,11 +11,17 @@
 
 .Title img{
     position: absolute;
-    left: 10%;
+    left: 5%;
     cursor: pointer;
     width: 30px;
 }
 
 .Title h2{
     font-size: 1.6rem;
+}
+
+@media(max-width: 600px){
+    .Title h2{
+        font-size: 1.2rem;
+    }
 }

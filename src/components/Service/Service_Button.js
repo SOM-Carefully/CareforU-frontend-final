@@ -1,3 +1,5 @@
+import './Service.css';
+
 function Service_Button(props) {
     const { isSelected, handleClick, elementIndex } = props;
     return(

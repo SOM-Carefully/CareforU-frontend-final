@@ -18,6 +18,15 @@ img {
     height: 30px;
 }
 
+@media(max-width: 600px){
+    img {
+        width: 20px;
+        height: 20px;
+    }
+    p{
+        font-size: 15px;
+    }
+}
 p {
     font-weight: 600;
 }

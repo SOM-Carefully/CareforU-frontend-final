@@ -31,7 +31,7 @@ const GeneralMyPage = () => {
     const [users, setUsers] = useState([]);
     const [roles, setRoles] = useState([]);
     const [nicknames, setNicknames] = useState([]);
-    const [profileUrls, setProfileUrls] = useState([]);
+    const [profileUrls, setProfileUrls] = useState();
 
     const token = localStorage.getItem('accessToken');
     const refreshToken = localStorage.getItem('refreshToken');
@@ -67,30 +67,33 @@ const GeneralMyPage = () => {
     }
 
     // GET 요청으로 일반 회원 정보 불러오기
-    window.onload = axios({
-        method: "get",
-        url: "http://54.180.210.232:8080/api/v1/users/my",
-        headers: {
-            "Content-Type": "application/json",
-            Authorization: "Bearer " + token
-        },
-    }).then((res) => {
-        // 정보 설정
-        setUsers(res.data.result.name);
-        setRoles(res.data.result.role);
-        setNicknames(res.data.result.nickname);
-        setProfileUrls(res.data.result.profileUrl);
-        console.log(res.data.result.major);
-        localStorage.setItem('nickname', res.data.result.nickname);
-        localStorage.setItem('profileUrl', res.data.result.profileUrl);
-        localStorage.setItem('university', res.data.result.universityName);
-        localStorage.setItem('major', res.data.result.major);
-        localStorage.setItem('advisorName', res.data.result.advisorName);
-        localStorage.setItem('education', res.data.result.educationRequest);
-        localStorage.setItem('address', res.data.result.address);
-    }).catch((error) => {
-        alert("정보를 가져올 수 없습니다");
-    });
+    useEffect( () => {
+        axios({
+            method: "get",
+            url: "http://54.180.210.232:8080/api/v1/users/my",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: "Bearer " + token
+            },
+        }).then((res) => {
+            // 정보 설정
+            setUsers(res.data.result.name);
+            setRoles(res.data.result.role);
+            setNicknames(res.data.result.nickname);
+            console.log(res.data.result.profileUrl);
+            localStorage.setItem('nickname', res.data.result.nickname);
+            localStorage.setItem('profileUrl', res.data.result.profileUrl);
+            localStorage.setItem('university', res.data.result.universityName);
+            localStorage.setItem('major', res.data.result.major);
+            localStorage.setItem('advisorName', res.data.result.advisorName);
+            localStorage.setItem('education', res.data.result.educationRequest);
+            localStorage.setItem('address', res.data.result.address);
+            setProfileUrls(res.data.result.profileUrl);
+        }).catch((error) => {
+            alert("정보를 가져올 수 없습니다");
+        });
+    }, [])
+
 
     // 일반 회원 정보 수정 페이지로 이동
     const onMoveEditInfo = (e) => {
@@ -114,7 +117,7 @@ const GeneralMyPage = () => {
             <div className="profile-wrap">
                 <div className="profile-info">
                     <div className="profile-name">
-                        {profileUrls===null?<img src={profile}/>:<img src={{uri : profileUrls}}/>}
+                        {profileUrls===null?<img src={profile}/>:<img src={profileUrls}/>}
                         {nicknames===null?<p>{users} 님</p>:<p>{nicknames} 님</p>}
                         <p id="role">{levels[roles]}</p>
                     </div>

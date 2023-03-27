@@ -148,7 +148,7 @@ function Service_Post() {
                 timeout();
               })
               .catch(error => {
-                alert('어쩌지이... ? 안 뜨는데에..');
+                alert('파일을 업로드해주세요.');
               });
 
             return;
@@ -352,7 +352,7 @@ function Service_Post() {
   };
 
   return (
-    <div className="Service_Top_Wrap">
+    <div className="Service_Top_Wrap2">
       <div className="ServiceWrap">
         <Title title="서비스 신청" />
         <h3 id="categoryTitle">카테고리</h3>
@@ -486,14 +486,18 @@ function Service_Post() {
           />
         </div>
 
-        <input type="file"
+        <p id={"fileWarningMessage"}>*파일 선택 후 꼭 파일 등록 버튼을 클릭해주세요. </p>
+        <div id="inputFileDiv">
+          <input type="file" id="inputFile"
                onChange={saveImage}
                onClick={(e)=>e.target.value = null}
                ref={refParam => inputRef = refParam}
-        />
-        <button onClick={sendImageToServer}>
-          Upload
-        </button>
+          />
+
+          <button onClick={sendImageToServer} id="inputFileBtn">
+            파일 등록
+          </button>
+        </div>
       </div>
       <div className="apply_btn_wrap" onClick={ApplyService}>
         신청하기

@@ -132,7 +132,7 @@ function ServiceDetail() {
 
     return (
         <div>
-            <div className={"Service_Top_Wrap"}>
+            <div className={"Service_Top_Wrap2"}>
                 <div className="ServiceWrap">
                     <Title title="서비스 내용" />
                     {

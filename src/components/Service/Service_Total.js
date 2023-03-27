@@ -1,8 +1,8 @@
 import './Service.css';
 import axios from 'axios';
-import Board_header from "../Board_header2/Board_header";
+import Board_header from "../Board_header2/Board_header2";
 import Title from './../Title/Title';
-import Board_list from "../Board_list2/Board_list.js";
+import Board_list2 from "../Board_list2/Board_list2.js";
 import ServiceBtn from './Service_Button';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -82,13 +82,13 @@ function Service_Total(){
                 {content===Object(content)
                     ? content.content.map((content, index) => (
                         <li id={content.businessTypeResponse} key={index} onClick={e =>onMoveDetailServiceContent(content.bookingId, content.businessTypeResponse, e)} >
-                            <Board_list num={index+1} username={content.userUsername} posttime={content.createdAt[0] + '.' + content.createdAt[1] + '.' + content.createdAt[2]}  status={content.bookingStatus == 'ACCEPT' ? '승인됨' : content.bookingStatus == 'WAITING' ? '대기중' : content.bookingStatus == 'CANCEL' ? '취소됨' : '완료'} / >
+                            <Board_list2 num={index+1} username={content.userUsername} posttime={content.createdAt[0] + '.' + content.createdAt[1] + '.' + content.createdAt[2]}  status={content.bookingStatus == 'ACCEPT' ? '승인됨' : content.bookingStatus == 'WAITING' ? '대기중' : content.bookingStatus == 'CANCEL' ? '취소됨' : '완료'} / >
                         </li>
                     ))
                     : "등록된 글이 없습니다"}
             </ul>
             {
-                localStorage.getItem('userrole') == 'my' ? <div><button onClick={moveServicePost}>서비스 신청하기</button><button onClick={moveServiceMyPost}>내가 신청한 서비스 확인하기</button></div> : ''
+                localStorage.getItem('userrole') == 'my' ? <div id={'serviceWowBtnWrap'}><button id={"serviceWowBtn"} onClick={moveServicePost}>서비스 신청하기</button><button id={"serviceWowBtn2"} onClick={moveServiceMyPost}>내가 신청한 서비스 확인하기</button></div> : ''
             }
         </div>
     )

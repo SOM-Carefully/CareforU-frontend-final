@@ -1,5 +1,5 @@
-.Service_Top_Wrap {
-  width: 55%;
+.Service_Top_Wrap, .Service_Top_Wrap2{
+  width: 70%;
   margin: 0 auto 100px auto;
   z-index: 1;
   position: relative;
@@ -104,7 +104,7 @@
 }
 
 .apply_btn_wrap {
-  width: 55%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -182,4 +182,118 @@ input[type='number'] {
 #usimOk.isSelected,
 #usimNo.isSelected {
   color: #e0363f;
+}
+
+.Service_Top_Wrap ul{
+  margin-top: 5px;
+}
+
+#fileWarningMessage{
+  margin-top: 5px;
+  font-size: 12px;
+  padding-left: 12px;
+  color: #666666;
+}
+
+#inputFileDiv{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+input[type=file]::file-selector-button {
+  font-size: 13px;
+  font-weight: 400;
+  background-color: #e0363f;
+  color: white;
+  cursor: pointer;
+  border: 0;
+  border-radius: 8px;
+  padding: 4px 15px;
+}
+
+
+#inputFileBtn{
+  width: 80px;
+  font-size: 13px;
+  font-weight: 400;
+  background-color: #e0363f;
+  color: white;
+  cursor: pointer;
+  border: 0;
+  border-radius: 8px;
+  padding: 4px 15px;
+}
+
+#serviceWowBtnWrap{
+  display: flex;
+  flex-direction: row;
+}
+
+#serviceWowBtn, #serviceWowBtn2{
+  font-size: 13px;
+  font-weight: 400;
+  background-color: #e0363f;
+  color: white;
+  cursor: pointer;
+  border: 0;
+  border-radius: 8px;
+  padding: 4px 15px;
+}
+
+#serviceWowBtn2{
+  margin-left: 10px;
+}
+@media(max-width: 400px){
+  .categoryBox h3{
+    font-size: 15px;
+  }
+  #categoryTitle{
+    font-size: 15px;
+  }
+  input[type=file]::file-selector-button {
+    font-size: 12px;
+    padding: 4px 5px;
+  }
+  #inputFileBtn{
+    width: 60px;
+    padding: 4px 5px;
+    font-size: 12px;
+  }
+}
+
+@media(max-width: 600px){
+  .categoryBox h3{
+    font-size: 18px;
+  }
+  #categoryTitle{
+    font-size: 18px;
+  }
+  .Service_Button_List{
+    padding: 5px 12px;
+    font-size: 12px;
+  }
+  .Service_Top_Wrap{
+    width: 60%;
+  }
+  .Service_Top_Wrap2 {
+    width: 80%;
+  }
+  #message, .Service_content_box{
+    font-size: 12px;
+  }
+  #fileUrl{
+    font-size: 12px;
+  }
+}
+
+@media(max-width: 600px){
+  .Title h2{
+    font-size: 1.2rem;
+  }
 }
