@@ -148,7 +148,7 @@ function Service_Post() {
                 timeout();
               })
               .catch(error => {
-                alert('어쩌지이... ? 안 뜨는데에..');
+                alert('파일을 업로드해주세요.');
               });
 
             return;

@@ -6,3 +6,24 @@
   margin-right: -30vw;
   //padding: 1px;
 }
+
+.board_header2_container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  //padding: 1px;
+}
+
+.board_header2_container h4{
+  margin: 15px 10px;
+  font-size: 17px;
+}
+
+@media(max-width: 500px){
+  .board_header2_container{
+    font-size: 12px;
+    margin-left: -55px;
+    margin-right: -60px;
+    padding: 0px;
+  }
+}
