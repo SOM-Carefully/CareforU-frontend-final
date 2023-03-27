@@ -88,7 +88,7 @@ function Service_Total(){
                     : "등록된 글이 없습니다"}
             </ul>
             {
-                localStorage.getItem('userrole') == 'my' ? <div><button onClick={moveServicePost}>서비스 신청하기</button><button onClick={moveServiceMyPost}>내가 신청한 서비스 확인하기</button></div> : ''
+                localStorage.getItem('userrole') == 'my' ? <div id={'serviceWowBtnWrap'}><button id={"serviceWowBtn"} onClick={moveServicePost}>서비스 신청하기</button><button id={"serviceWowBtn2"} onClick={moveServiceMyPost}>내가 신청한 서비스 확인하기</button></div> : ''
             }
         </div>
     )
