@@ -93,11 +93,7 @@ function Post(props) {
     
   }, []);
 
-  useEffect(() => {
-    if (content && Object.keys(content).length > 0) {
-      console.log("content :", content[0])
-    }
-  }, [content])
+  
 
 
 
@@ -162,25 +158,7 @@ async function getResponse() {
    return mIdx;
 }
 
-function testt(){
-  fetch(`http://54.180.210.232:8080/api/v1/posts?role=FREE&category=${categoryId}&page=0`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        'Authorization': `Bearer ${token}`
-      },
-    }) //method get 은 생략 가능
-      .then((res) => res.json())
-      .then((res) => setContent(res.result))
-      .then((res) => setLoading(false))
 
-      const t1t1=content;
-  return t1t1;
-}
-
-function testt2(){
-  return testt();
-}
 
 
 
