@@ -12,6 +12,8 @@ function Post(props) {
   const token = localStorage.getItem('accessToken');
   const [cmt_api, setCmt_api] = useState("")
   const [comment_cnt, setComment_cnt] = useState(10000);
+  let mIdx = 0;
+  let i=0;
   console.log("[post.js]postid:", id);
   console.log("[post.js]categoryId:", categoryId);
   function get() {
@@ -25,8 +27,10 @@ function Post(props) {
       .then((res) => res.json())
       .then((res) => setContent(res.result))
       .then((res) => setLoading(false))
-
+    
   }
+
+  
 
   function get_comment() {
     fetch(`http://54.180.210.232:8080/api/v1/comments/${id}`, {
@@ -48,6 +52,10 @@ function Post(props) {
     //.then((res) => setComment_cnt(res.result.commentList.length))
     //.then((res) => console.log("적용됬는지.....:", comment_cnt))
   }
+
+  
+
+  
 
   function post_comment() {
     fetch(`http://54.180.210.232:8080/api/v1/comments`, {
@@ -78,8 +86,10 @@ function Post(props) {
 
 
   useEffect(() => {
+    
     get();
     get_comment();
+    
   }, []);
 
   useEffect(() => {
@@ -96,8 +106,81 @@ function Post(props) {
     console.log("댓글쓰는중:", comment);
   };
 
-  console.log(content);
+  console.log("나오나???????????",content);
   //console.log("해체중:", content.content[0].writer);
+  // for(let i=0; i <= 99999; i++)
+  //   {
+  //     if (id == content[i].postId){
+  //       mIdx=i;
+  //     }
+  //   }
+  //   console.log("함수 matchIdx:",mIdx);
+
+//   function matchIdx(length){
+//     //get();
+    // for(let i=0; i <= 99999; i++)
+    // {
+    //   if (id == content[i].postId){
+    //     mIdx=i;
+    //   }
+    // }
+    // console.log("함수 matchIdx:",mIdx);
+
+//  }
+
+
+
+
+
+async function getResponse() {
+	const response = await fetch(
+		`http://54.180.210.232:8080/api/v1/posts?role=FREE&category=${categoryId}&page=0`,
+		{
+			method: 'GET',
+			headers: {
+				"Content-Type": "application/json",
+      'Authorization': `Bearer ${token}`
+			}
+		}
+	);
+	let data = await response.json(); // Extracting data as a JSON Object from the response
+  data=data.result.content;
+  console.log("~~~~~~~~~~~~~~~~~~~~",data)
+  for(let i=0; i < data.length; i++)
+    {
+      console.log(data[i].postId);
+      if (data[i].postId == id){
+        
+        mIdx = i
+       
+      }
+    }
+   // console.log("함수 matchIdx:",mIdx);
+    
+  
+   return mIdx;
+}
+
+function testt(){
+  fetch(`http://54.180.210.232:8080/api/v1/posts?role=FREE&category=${categoryId}&page=0`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        'Authorization': `Bearer ${token}`
+      },
+    }) //method get 은 생략 가능
+      .then((res) => res.json())
+      .then((res) => setContent(res.result))
+      .then((res) => setLoading(false))
+
+      const t1t1=content;
+  return t1t1;
+}
+
+function testt2(){
+  return testt();
+}
+
 
 
   console.log("cmt_api 객체?:", content === Object(content));
@@ -117,13 +200,14 @@ function Post(props) {
           <img className="userImg" src="/userImg.png"></img>
           <span className="name_date_box">
             <div className="name_date">
-              {content.content[content.contentsCount - id].writer}
+              {/* {content.content[mIdx].writer} */}
 
             </div>
             <div className="name_date">{content.content[content.contentsCount - id].createdAt}</div>
           </span>
         </div>
         <div className="post_content_box">
+          
           <div className="post_title">{content.content[content.contentsCount - id].title}</div>
           {content.content[content.contentsCount - id].imgUrl == null ? ("") : (<img className="post_img" src={content.content[content.contentsCount - id].imgUrl}></img>
           )}

@@ -13,11 +13,6 @@ import Login from "./components/Login/Login";
 import Home from "./pages/line2/home";
 
 
-
-
-
-
-
 import SelectType from "./components/SelectType/SelectType";
 
 import AdminSignup from "./components/AdminSignup/AdminSignup";

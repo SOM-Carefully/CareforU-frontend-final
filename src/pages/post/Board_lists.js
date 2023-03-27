@@ -83,7 +83,7 @@ function Board_lists(props) {
             ? content.content.map((content, index) => (
               <li key={index}>
                 
-                <Link to={`/${props.detail}/${id}/${content.postId}`} style={{ textDecoration: 'none', color: "black" }}>
+                <Link to={`/post/${id}/${content.postId}`} style={{ textDecoration: 'none', color: "black" }}>
                
                   <Board_list id={content.postId} num={content.postId} title={content.title} name={content.writer} />
                 </Link>
