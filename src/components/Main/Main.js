@@ -13,7 +13,7 @@ function Main(){
     useEffect(() => {
         axios({
             method: "get",
-            url: "http://54.180.210.232:8080/api/v1/posts?role=NOTICE&page=0",
+            url: "http://54.180.210.232:8080/api/v1/posts",
             headers: {
                 "Content-Type": "application/json",
                 Authorization: "Bearer " + token,
@@ -22,7 +22,7 @@ function Main(){
             setFreeContent(res.data.result);
             console.log(content);
         }).catch((error) => {
-            console.log("공지사항을 가져올 수 없습니다.");
+            console.log("자유게시판을 가져올 수 없습니다.");
         });
     },[]);
 
@@ -40,7 +40,7 @@ function Main(){
             setContent(res.data.result);
             console.log(content);
         }).catch((error) => {
-            console.log("어쩌지이... ? 안 뜨는데에..");
+            console.log("공지사항을 가져올 수 없습니다.");
         });
     },[]);
 
