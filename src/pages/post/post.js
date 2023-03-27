@@ -3,6 +3,7 @@ import { useState, useEffect, React } from "react";
 import Header from "./../../components/Header/Header.js";
 import Comment from "../../components/Comment/Comment.js";
 import "./../../styles/post.scss"
+import Post2 from "./Post2";
 function Post(props) {
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(true);
@@ -194,39 +195,10 @@ function testt2(){
   return (
     <div>
       <Header title={props.header_title} />
-      {loading ? ("") : (<div className="post_wrapper">
+      
+      {loading ? ("") : (
 
-        <div className="post_header_box">
-          <img className="userImg" src="/userImg.png"></img>
-          <span className="name_date_box">
-            <div className="name_date">
-              {/* {content.content[mIdx].writer} */}
-
-            </div>
-            <div className="name_date">{content.content[content.contentsCount - id].createdAt}</div>
-          </span>
-        </div>
-        <div className="post_content_box">
-          
-          <div className="post_title">{content.content[content.contentsCount - id].title}</div>
-          {content.content[content.contentsCount - id].imgUrl == null ? ("") : (<img className="post_img" src={content.content[content.contentsCount - id].imgUrl}></img>
-          )}
-          <div className="post_content">{content.content[content.contentsCount - id].content}</div>
-        </div>
-        <div className="cmt_wrapper">
-          <ul>
-            {comment_cnt == 0 ? <h1>댓글 0개, 댓글 {comment_cnt}개</h1> : cmt_api.map((cmt, index) => (<li key={index}><div><Comment content={cmt.parent.content} createdAt={cmt.parent.createdAt} /></div></li>))
-            }
-          </ul>
-        </div>
-        {/* cmt_api.map((cmt, index) => (<li key={index}><Comment content={cmt.parent.content} /></li> */}
-        <div className="cmt_input_wrapper">
-          <input className="cmt_input" placeholder="댓글을 입력하세요." onChange={onChange} value={comment}></input>
-          <div className="submit_btn" onClick={post_comment}>전송</div>
-        </div>
-      </div>
-
-
+<Post2 content={content} id={id} />
 
       )}
 
