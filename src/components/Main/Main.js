@@ -7,7 +7,7 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import Board_header2 from "../Board_header2/Board_header2";
 import Board_list2 from "../Board_list2/Board_list2";
-import {Link, useParams} from "react-router-dom";
+import {Link, useNavigate, useParams} from "react-router-dom";
 import Category from "../Category/Category";
 function Main(){
     const [content, setContent] = useState('');
@@ -16,8 +16,16 @@ function Main(){
     const [notice, setNotice] = useState('');
 
     const token = localStorage.getItem('accessToken');
-
     const { id } = useParams();
+    const navigate = useNavigate();
+
+    const onMoveNotice = (e) => {
+        navigate('/board_list/2');
+    }
+    const onMoveFree = (e) => {
+        navigate('/board_list/1');
+    }
+
     useEffect(() => {
         axios({
             method: "get",
@@ -62,7 +70,7 @@ function Main(){
         <div>
             <Title title="메인페이지" />
             <div className="main_notice_wrap">
-                <h3>공지사항</h3>
+                <h3 onClick={onMoveNotice}>📢     공지사항</h3>
                 <ul>
                     {content === Object(content)
                         ? content.content.map((content, index) => (
@@ -79,7 +87,7 @@ function Main(){
                 </ul>
             </div>
             <div className="main_free_wrap">
-                <h3>자유게시판</h3>
+                <h3 onClick={onMoveFree}>🆓   자유게시판</h3>
                 <ul>
                     {freeContent === Object(freeContent)
                         ? freeContent.content.map((freeContent, index) => (
