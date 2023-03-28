@@ -1,6 +1,7 @@
 import { useState, React } from "react";
 import Comment from "../../components/Comment/Comment.js";
 import "./../../styles/post.scss"
+import { useLocation } from 'react-router-dom';
 //87줄 댓글
 //post2 반영??????
 
@@ -9,6 +10,7 @@ function Post2(props){
     const [cmt_api, setCmt_api] = useState("")
     const token = localStorage.getItem('accessToken');
     let idx = 1;
+    let location = useLocation();
     function getIdx(){
        // console.log("함수 getIdx: ", props.content.content.length);
         const length = props.content.content.length;
@@ -36,6 +38,7 @@ function Post2(props){
       };
 
       function post_comment() {
+        
         fetch(`http://54.180.210.232:8080/api/v1/comments`, {
           method: "POST",
           headers: {
@@ -54,10 +57,12 @@ function Post2(props){
         })
           .then((response) => response.json())
           .then((response) => console.log(response, "댓글 post햇다"))
-          .then((response) => get_comment())
+         // .then((response) => get_comment())
+
+         window.location.reload();
     
     
-        setComment("")
+       
     
     
       }
@@ -116,7 +121,8 @@ function Post2(props){
           </ul> */}
         </div>
         {/* cmt_api.map((cmt, index) => (<li key={index}><Comment content={cmt.parent.content} /></li> */}
-        {cmt.map((cmt)=>(<div key={cmt.parent.commentId}><Comment content={cmt.parent.content} createdAt={cmt.parent.createdAt} /></div>))}
+        {Array.isArray(cmt)? cmt.map((cmt)=>(<div key={cmt.parent.commentId}><Comment content={cmt.parent.content} createdAt={cmt.parent.createdAt} /></div>)):""}
+        
         <div className="cmt_input_wrapper">
           <input className="cmt_input" placeholder="댓글을 입력하세요." onChange={onChange} value={props.comment}></input>
           <div className="submit_btn" onClick={post_comment}>전송</div>
