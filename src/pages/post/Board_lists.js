@@ -3,6 +3,7 @@ import Btn from "../../components/Btn/Btn.js";
 import Board_header from "../../components/Board_header2/Board_header";
 import Board_list from "../../components/Board_list2/Board_list";
 //import Board_list from "../../components/Board_list/Board_list.js";
+import "../../styles/board_lists.scss"
 
 import { useState, useEffect, React } from "react";
 import { Link } from "react-router-dom";
@@ -77,7 +78,7 @@ function Board_lists(props) {
       <div className="display_container">
         <Btn url={`/add_post/${id}`} />
 
-        <Board_header t1="번호" t2="제목" t3="글쓴이" />
+        <Board_header className="board_header" t1="번호" t2="제목" t3="글쓴이" />
         <ul>
           {content === Object(content)
             ? content.content.map((content, index) => (
