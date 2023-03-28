@@ -10,15 +10,15 @@ function Post2(props){
     const token = localStorage.getItem('accessToken');
     let idx = 1;
     function getIdx(){
-        console.log("함수 getIdx: ", props.content.content.length);
+       // console.log("함수 getIdx: ", props.content.content.length);
         const length = props.content.content.length;
-        console.log("변수 length: ", length )
+        //console.log("변수 length: ", length )
         const data = props.content.content
         let dIdx=1;
         for(let i=0; i < length; i++){
-            console.log("postId:",data[i].postId)
+            //console.log("postId:",data[i].postId)
             if (data[i].postId == props.id){
-                console.log("t")
+                //console.log("t")
                 dIdx = i;
             }
         }
@@ -83,6 +83,10 @@ function Post2(props){
         //.then((res) => console.log("적용됬는지.....:", comment_cnt))
       }
 
+      console.log("댓글 props:",props.cmt);
+      const cmt = props.cmt;
+      console.log("변수 cmt 값:", cmt);
+
     return(
         <div>
             <div className="post_wrapper">
@@ -112,6 +116,7 @@ function Post2(props){
           </ul> */}
         </div>
         {/* cmt_api.map((cmt, index) => (<li key={index}><Comment content={cmt.parent.content} /></li> */}
+        {cmt.map((cmt)=>(<div key={cmt.parent.commentId}><Comment content={cmt.parent.content} createdAt={cmt.parent.createdAt} /></div>))}
         <div className="cmt_input_wrapper">
           <input className="cmt_input" placeholder="댓글을 입력하세요." onChange={onChange} value={props.comment}></input>
           <div className="submit_btn" onClick={post_comment}>전송</div>

@@ -176,7 +176,7 @@ async function getResponse() {
       
       {loading ? ("") : (
 
-<Post2 content={content} id={id} />
+<Post2 content={content} id={id} cmt={cmt_api} />
 
       )}
 
