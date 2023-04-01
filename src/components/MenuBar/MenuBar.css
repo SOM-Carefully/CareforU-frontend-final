@@ -1,16 +1,17 @@
 .menu-wrap {
     display: flex;
-    justify-content: center;
+    margin: 0 auto;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     position: fixed;
-    padding-bottom: 20px;
     padding-top: 10px;
     z-index: 1;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: white;
+    width: 70%;
 }
 
 img {
@@ -19,21 +20,22 @@ img {
 }
 
 @media(max-width: 600px){
+    .menu-wrap{
+        width: 90%;
+    }
     img {
         width: 20px;
         height: 20px;
     }
     p{
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 p {
     font-weight: 600;
 }
 
-.menu-item {
-    padding: 0 5% 0 5%;
-}
+
 
 .menu-item p, .menu-item img{
     cursor: pointer;

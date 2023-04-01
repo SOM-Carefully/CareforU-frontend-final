@@ -21,9 +21,6 @@ const MenuBar = () => {
         navigate('/service_home');
     }
 
-    const onMoveNotice = (e) => {
-        navigate('/notice_list');
-    }
 
     return (
         <div className="menu-wrap">
@@ -34,10 +31,6 @@ const MenuBar = () => {
             <div className="menu-item">
                 <img src={apply} onClick={onMoveService}/>
                 <p>서비스 관리</p>
-            </div>
-            <div className="menu-item">
-                <img src={traffic} onClick={onMoveNotice}/>
-                <p>리스트</p>
             </div>
             <div className="menu-item">
                 <img src={mypage} onClick={onMoveMypage}/>
