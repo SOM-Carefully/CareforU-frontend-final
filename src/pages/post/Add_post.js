@@ -1,16 +1,9 @@
 import Header from "./../../components/Header/Header";
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Uploader } from "uploader";
-import { UploadButton } from "react-uploader";
 import { useParams } from "react-router-dom";
 import "./../../styles/post/add_post.scss"
 import React from 'react';
-
-const uploader = Uploader({
-  apiKey: "free"
-});
 
 function Add_post(props) {
   //console.log("[Add_post.js props:]",props);
@@ -21,25 +14,7 @@ function Add_post(props) {
   const navigate = useNavigate();
 
   const token = localStorage.getItem('accessToken');
-  const MyButtonComponent = () =>
-    <UploadButton uploader={uploader}         // Required.
-      //options={options}           // Optional.
-      onComplete={files => {      // Optional.
-        if (files.length === 0) {
-          console.log('No files selected.')
-        } else {
-          console.log('Files uploaded:');
-          console.log("1.img:", files.map(f => f.fileUrl));
-          setImg(files.map(f => f.fileUrl));
-
-        }
-      }}>
-      {({ onClick }) =>
-        <div onClick={onClick}>
-          <img className="icon" src="/camera.png"></img>
-        </div>
-      }
-    </UploadButton>
+  
 
   const onChange = (event) => {
     setPostTitle(event.target.value);
@@ -79,6 +54,8 @@ function Add_post(props) {
     alert("게시글이 등록되었습니다!");
   };
 
+
+
   return (
     <div>
       {/* <Board_lists postTitles={postTitles}></Board_lists> */}
@@ -99,10 +76,20 @@ function Add_post(props) {
             value={postContent} placeholder="내용을 입력하세요."></textarea>
         </div>
 
+        <div className="add_img_modal_wrapper">
+          <div className="x">X</div>
+          <div className="add_img_wrapper">
+          <input type="file" />
+          <div className="add_btn">첨부</div>
+          </div>
+          
+        </div>
+
       </div>
       <div className="bottom_btn_wrapper">
         <div className="camera_icon">
-          <MyButtonComponent></MyButtonComponent></div>
+        <img className="icon" src="/camera.png"></img>
+          </div>
         <div className="submit_btn" onClick={onClick}>등록</div>
 
       </div>
