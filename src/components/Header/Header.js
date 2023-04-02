@@ -7,16 +7,15 @@ function Header(props) {
     const navigate = useNavigate();
 
     return (
-        <div className="header">
-            <div className="icon_box" onClick={() => navigate(-1)}>
-                <div className="icon_wrapper">
-                    <FontAwesomeIcon className="icon" icon={faChevronLeft} />
-                </div>
+        <>
+        <div className="header_wrapper">
+            <div className="icon" onClick={() => navigate(-1)}>
+            <FontAwesomeIcon className="icon" icon={faChevronLeft} />
             </div>
-            <div className="header_title_box">
-                <div className="header_title">{props.title}</div>
-            </div>
+            <div className="header_text">{props.title}</div>
         </div>
+        </>
+
     );
 }
 
