@@ -13,6 +13,7 @@ const uploader = Uploader({
 });
 
 function Add_post(props) {
+  //console.log("[Add_post.js props:]",props);
   const [postTitle, setPostTitle] = useState("");
   const [postContent, setPostContent] = useState("");
   const [img, setImg] = useState("");
@@ -83,8 +84,8 @@ function Add_post(props) {
       {/* <Board_lists postTitles={postTitles}></Board_lists> */}
 
 
-      {/* <Header title="글 작성" /> */}
-      <Header title={props.header_title} />
+      <Header title="글 작성" />
+      {/* <Header title={props.header_title} /> */}
       <div className="display_container">
 
         <div className="input_title_wrapper">
