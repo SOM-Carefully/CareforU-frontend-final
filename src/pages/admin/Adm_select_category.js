@@ -33,6 +33,25 @@ function Adm_select_category() {
         //console.log("function test")
     }
 
+    function deleteCategory(categoryId) {
+        fetch(`http://54.180.210.232:8080/api/v1/category/${categoryId}`, {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+            'Authorization': `Bearer ${token}`
+          },
+        })
+          .then((res) => res.json())
+          .then(() => {
+            // 삭제 후 카테고리 목록을 다시 불러옵니다.
+            Get();
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+      }
+      
+
     useEffect(() => {
         Get()
     }, []);
@@ -57,9 +76,12 @@ function Adm_select_category() {
                 <ul className='menu'>
                     {category_names === Object(category_names)
                         ? category_names.map((content, index) => (
-                            <li key={index}>
+                            <li  key={index}>
                                 {/* <Link to={`/${props.detail}/${index}`} style={{ textDecoration: 'none', color: "black" }}> */}
-                                <Category category_name={content.categoryName} />
+                                <div className='category_name'>
+                                <Category category_name={content.categoryName} /><div className='btn_delete' onClick={() => deleteCategory(content.categoryId)}>삭제</div>
+                                </div>
+                                
                                 {/* </Link> */}
 
                             </li>

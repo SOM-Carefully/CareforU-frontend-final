@@ -3,6 +3,28 @@
     height: 12px;
     margin-left: 11px;
 }
-.menu{
-    margin-left: -30px;
+
+    
+    .menu{
+        margin-left: -30px;
+    
+        .category_name{
+            display: flex;
+            align-items: center;
+            
+        }
+        
+    }
+
+
+.btn_delete{
+    width: 3vw;
+    height: 3vh;
+    font-size: 16px;
+    text-align: center;
+    line-height: 3vh;
+    
+    background-color:  #eba3a3;
+    border-radius: 3px;
+    margin-left: 5px;
 }
