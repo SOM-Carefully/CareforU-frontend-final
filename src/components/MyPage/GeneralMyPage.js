@@ -14,7 +14,8 @@ const GeneralMyPage = () => {
 
     // 문의하기 페이지로 이동
     const onMoveAsk = (e) => {
-        navigate('/ask');
+        // navigate('/ask');
+        alert('이동할 수 없는 페이지입니다.');
     }
 
     // 내가 쓴 글 페이지로 이동
