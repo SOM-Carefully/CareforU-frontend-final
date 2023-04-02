@@ -43,6 +43,7 @@ function Login(){
                 alert('로그인에 성공하였습니다.');
                 localStorage.setItem('accessToken', res.data.result.accessToken);
                 localStorage.setItem('refreshToken', res.data.result.refreshToken);
+                console.log(localStorage.getItem('accessToken'));
                 navigate('/main');})
             .catch((error) => {
                 // 로그인 실패(아이디 및 비밀번호 존재 확인)
