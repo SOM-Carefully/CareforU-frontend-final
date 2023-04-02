@@ -8,8 +8,9 @@
 
     .post_btn {
       height: 40px;
+      width:40px;
       filter: drop-shadow(3px 3px 3px gray);
-      position: absolute;
+      position: fixed;
       right: 10px;
       bottom: 10px;
     }
