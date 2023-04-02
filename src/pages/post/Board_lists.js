@@ -66,7 +66,7 @@ function Board_lists(props) {
 
   console.log("11:", content);
   console.log("객체?:", content === Object(content));
-  console.log("map:", content.content);
+  console.log("[Board_lists] 데이터:", content.content);
 
 
 
@@ -80,7 +80,7 @@ function Board_lists(props) {
 
         <Board_header className="board_header" t1="번호" t2="제목" t3="글쓴이" />
         <ul>
-          {content === Object(content)
+          {content === Object(content) && content.content.length !=0
             ? content.content.map((content, index) => (
               <li key={index}>
                 
@@ -91,7 +91,7 @@ function Board_lists(props) {
 
               </li>
             ))
-            : "등록된 글이 없습니다"}
+            : <div className="post_x">등록된 글이 없습니다</div>}
         </ul>
         {/* <Pagination_box /> */}
       </div>
