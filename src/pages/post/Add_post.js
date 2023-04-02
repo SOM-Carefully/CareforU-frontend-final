@@ -10,6 +10,7 @@ function Add_post(props) {
   const [postTitle, setPostTitle] = useState("");
   const [postContent, setPostContent] = useState("");
   const [img, setImg] = useState("");
+  const [modal, setModal]=useState(false);
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -76,8 +77,8 @@ function Add_post(props) {
             value={postContent} placeholder="내용을 입력하세요."></textarea>
         </div>
 
-        <div className="add_img_modal_wrapper">
-          <div className="x">X</div>
+        <div className={modal? "add_img_modal_wrapper":"add_img_modal_wrapper_x"}>
+          <div className="x" onClick={() => setModal(false)}>X</div>
           <div className="add_img_wrapper">
           <input type="file" />
           <div className="add_btn">첨부</div>
@@ -87,7 +88,7 @@ function Add_post(props) {
 
       </div>
       <div className="bottom_btn_wrapper">
-        <div className="camera_icon">
+        <div className="camera_icon" onClick={() => setModal(true)}>
         <img className="icon" src="/camera.png"></img>
           </div>
         <div className="submit_btn" onClick={onClick}>등록</div>
