@@ -46,15 +46,15 @@ function Adm_select_category() {
             <Header />
             {openModal && <Modal_setName setModal={setOpenModal} />}
             <div className="category_box">
-                <div className="category_menu" onClick={click_notice}>
+                {/* <div className="category_menu" onClick={click_notice}>
                     <div ><img className='icon' src="/pin.png"></img></div>
                     공지사항
                 </div>
                 <div className="category_menu" onClick={click_post}>
                     <img className='icon' src="/pin.png"></img>자유게시판
                 </div>
-                <Category category_name="안녕" />
-                <ul>
+                <Category category_name="안녕" /> */}
+                <ul className='menu'>
                     {category_names === Object(category_names)
                         ? category_names.map((content, index) => (
                             <li key={index}>
