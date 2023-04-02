@@ -76,7 +76,7 @@ function Main(){
                         ? content.content.map((content, index) => (
                             <li key={index}>
 
-                                <Link to={`/post/${id}/${content.postId}`} style={{ textDecoration: 'none', color: "black" }}>
+                                <Link to={`/post/1/${content.postId}`} style={{ textDecoration: 'none', color: "black" }}>
 
                                     <Board_list id={content.postId} num={content.postId} title={content.title} name={content.writer} />
                                 </Link>
@@ -93,7 +93,7 @@ function Main(){
                         ? freeContent.content.map((freeContent, index) => (
                             <li key={index}>
 
-                                <Link to={`/post/${id}/${freeContent.postId}`} style={{ textDecoration: 'none', color: "black" }}>
+                                <Link to={`/post/2/${freeContent.postId}`} style={{ textDecoration: 'none', color: "black" }}>
 
                                     <Board_list id={freeContent.postId} num={freeContent.postId} title={freeContent.title} name={freeContent.writer} />
                                 </Link>
