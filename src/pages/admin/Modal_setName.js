@@ -30,6 +30,8 @@ function Modal_setName({ setModal }) {
         post();
         setModal(false);
         alert(categoryName + " 게시판이 생성되었습니다!");
+        window.location.reload();
+
     };
 
     return (
