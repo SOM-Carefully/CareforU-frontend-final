@@ -21,15 +21,17 @@ function GeneralSignup4() {
     }
 
     return (
-        <div className="GeneralSignup-form">
+        <div className="GeneralSignup2-form-wrap">
             <Title title="" />
-            <h1>이메일을 입력해주세요</h1>
-            <h3>빠밤 !! 혜민님 요것도 만들어주세요 ㅜ,ㅜ</h3>
-            <div id="username">
-                <input type="text" name="username" value={username} onChange={onUsernameHandler}></input>
-            </div>
-            <div className="Signup-Btn">
-                <button id="Signup-Btn" type="button" onClick={onSubmitHandler}>입력 완료</button>
+            <div className="GeneralSignup-form">
+                <h1>이메일을 입력해주세요</h1>
+                <h3>회원 가입 시 필수입니다</h3>
+                <div id="username">
+                    <input type="text" name="username" value={username} onChange={onUsernameHandler}></input>
+                </div>
+                <div className="Signup-Btn">
+                    <button id="Signup-Btn" type="button" onClick={onSubmitHandler}>입력 완료</button>
+                </div>
             </div>
         </div>
     )

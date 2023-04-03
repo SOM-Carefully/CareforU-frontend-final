@@ -39,32 +39,34 @@ function GeneralSignup3() {
     }
 
     return (
-        <div className="GeneralSignup-form">
+        <div className="GeneralSignup2-form-wrap">
             <Title title="" />
-            <div id="universityName">
-                <label for="universityName">학교</label>
-                <input type="text" name="universityName" value={universityName} onChange={onUniversityHandler}></input>
-            </div>
-            <div id="major">
-                <label for="major">전공</label>
-                <input type="text" name="major" value={major} onChange={onMajorHandler}></input>
-            </div>
-            <div id="educationRequest">
-                <label for="educationRequest">학력</label>
-                <select value={educationRequest} name="educationRequest" onChange={onEducationHandler}>
-                    <option value="NA">선택</option>
-                    <option value="UNDERGRADUATE">학부</option>
-                    <option value="BACHELOR">학사</option>
-                    <option value="MASTER">석사</option>
-                    <option value="DOCTOR">박사</option>
-                </select>
-            </div>
-            <div id="advisorName">
-                <label for="advisorName">지도교수</label>
-                <input type="text" name="advisorName" value={advisorName} onChange={onAdvisorHandler}></input>
-            </div>
-            <div className="Signup-Btn">
-                <button id="Signup-Btn" type="button" onClick={onSubmitHandler}>입력 완료</button>
+            <div className="GeneralSignup2-form">
+                <div id="universityName">
+                    <label for="universityName">학교</label>
+                    <input id="secondInput" type="text" name="universityName" value={universityName} onChange={onUniversityHandler}></input>
+                </div>
+                <div id="major">
+                    <label for="major">전공</label>
+                    <input id="secondInput" type="text" name="major" value={major} onChange={onMajorHandler}></input>
+                </div>
+                <div id="educationRequest">
+                    <label for="educationRequest">학력</label>
+                    <select value={educationRequest} name="educationRequest" onChange={onEducationHandler}>
+                        <option value="NA">선택</option>
+                        <option value="UNDERGRADUATE">학부</option>
+                        <option value="BACHELOR">학사</option>
+                        <option value="MASTER">석사</option>
+                        <option value="DOCTOR">박사</option>
+                    </select>
+                </div>
+                <div id="advisorName">
+                    <label for="advisorName">지도교수</label>
+                    <input id="secondInput" type="text" name="advisorName" value={advisorName} onChange={onAdvisorHandler}></input>
+                </div>
+                <div className="Signup-Btn">
+                    <button id="Signup-Btn" type="button" onClick={onSubmitHandler}>입력 완료</button>
+                </div>
             </div>
         </div>
     )

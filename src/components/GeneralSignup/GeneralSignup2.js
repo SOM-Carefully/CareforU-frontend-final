@@ -45,34 +45,39 @@ function GeneralSignup2() {
     }
 
     return (
-        <div className="GeneralSignup-form">
-            <Title title="" />
-            <div id="name">
-                <label for="name">이름</label>
-                <input type="text" name="name" value={name} onChange={onNameHandler}></input>
-            </div>
-            <div id="identificationNumber">
-                <label for="identificationNumber">외국인등록번호</label>
-                <input type="text" name="identificationNumber" value={identificationNumber} onChange={onIdentificationNumberHandler}></input>
-            </div>
-            <div id="genderRequest">
-                <label for="genderRequest">성별</label>
-                <select value={genderRequest} name="genderRequest" onChange={onGenderHandler}>
-                    <option value="NA">선택</option>
-                    <option value="MAN">남</option>
-                    <option value="WOMAN">여</option>
-                </select>
-            </div>
-            <div id="nationality">
-                <label for="nationality">국적</label>
-                <input type="text" name="nationality" value={nationality} onChange={onNationalityHandler}></input>
-            </div>
-            <div id="address">
-                <label for="address">주소</label>
-                <input type="text" name="address" value={address} onChange={onAddressHandler}></input>
-            </div>
-            <div className="Signup-Btn">
-                <button id="Signup-Btn" type="button" onClick={onSubmitHandler}>입력 완료</button>
+        <div className="GeneralSignup2-form-wrap">
+            <Title title=""/>
+            <div className="GeneralSignup2-form">
+                <div id="name">
+                    <label htmlFor="name">이름</label>
+                    <input id="secondInput" type="text" name="name" value={name} onChange={onNameHandler}></input>
+                </div>
+                <div id="identificationNumber">
+                    <label htmlFor="identificationNumber">외국인등록번호</label>
+                    <input id="secondInput" type="text" name="identificationNumber" value={identificationNumber}
+                           onChange={onIdentificationNumberHandler}></input>
+                </div>
+                <div id="genderRequest">
+                    <label htmlFor="genderRequest">성별</label>
+                    <select value={genderRequest} name="genderRequest" onChange={onGenderHandler}>
+                        <option value="NA">선택</option>
+                        <option value="MAN">남</option>
+                        <option value="WOMAN">여</option>
+                    </select>
+                </div>
+                <div id="nationality">
+                    <label htmlFor="nationality">국적</label>
+                    <input type="text" id="secondInput" name="nationality" value={nationality}
+                           onChange={onNationalityHandler}></input>
+                </div>
+                <div id="address">
+                    <label htmlFor="address">주소</label>
+                    <input type="text" id="secondInput" name="address" value={address}
+                           onChange={onAddressHandler}></input>
+                </div>
+                <div className="Signup-Btn">
+                    <button id="Signup-Btn" type="button" onClick={onSubmitHandler}>입력 완료</button>
+                </div>
             </div>
         </div>
     )

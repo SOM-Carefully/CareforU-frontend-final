@@ -28,18 +28,21 @@ function AdminSignup2(props) {
     }
 
     return (
-        <div className="AdminSignup-form">
-            <Title title="휴대폰 본인 인증" />
-            <div id="name">
-                <label for="name">이름</label>
-                <input type="text" name="name" value={name} onChange={onNameHandler}></input>
-            </div>
-            <div id="identificationNumber">
-                <label for="identificationNumber">주민등록번호</label>
-                <input type="text" name="identificationNumber" value={identificationNumber} onChange={onIdentificationNumberHandler}></input>
-            </div>
-            <div className="Signup-Btn">
-                <button id="Signup-Btn" type="button" onClick={onSubmitHandler}>입력 완료</button>
+        <div className="AdminSignup2-form-wrap">
+            <Title title="휴대폰 본인 인증"/>
+            <div className="AdminSignup2-form">
+                <div id="name">
+                    <label htmlFor="name">이름</label>
+                    <input id="secondInput" type="text" name="name" value={name} onChange={onNameHandler}></input>
+                </div>
+                <div id="identificationNumber">
+                    <label htmlFor="identificationNumber">주민등록번호</label>
+                    <input id="secondInput" type="text" name="identificationNumber" value={identificationNumber}
+                           onChange={onIdentificationNumberHandler}></input>
+                </div>
+                <div className="Signup-Btn">
+                    <button id="Signup-Btn" type="button" onClick={onSubmitHandler}>입력 완료</button>
+                </div>
             </div>
         </div>
     )

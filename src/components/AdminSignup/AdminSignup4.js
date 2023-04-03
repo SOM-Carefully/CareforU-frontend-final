@@ -54,18 +54,20 @@ function AdminSignup4() {
     }
 
     return (
-        <div className="AdminSignup-form">
-            <Title title="" />
-            <h1>비밀번호를 입력해주세요</h1>
-            <h3>신중하게 입력 바랍니다</h3>
-            <div id="password">
-                <input type={showPassword ? "text" : "password"} name="password" value={password} onChange={onPasswordHandler}></input>
-            </div>
-            <div id="loginSubText">
-                <div onClick={() => setShowPassword(prevState => !prevState)}> {showPassword ? "Hide Password" : "Show Password"}</div>
-            </div>
-            <div className="Signup-Btn">
-                <button id="Signup-Btn" type="button" onClick={onSubmitHandler}>회원가입</button>
+        <div className="AdminSignup2-form-wrap">
+            <Title title=""/>
+            <div className="AdminSignup-form">
+                <h1>비밀번호를 입력해주세요</h1>
+                <h3>신중하게 입력 바랍니다</h3>
+                <div id="password">
+                    <input type={showPassword ? "text" : "password"} name="password" value={password} onChange={onPasswordHandler}></input>
+                </div>
+                <div id="loginSubText">
+                    <div onClick={() => setShowPassword(prevState => !prevState)}> {showPassword ? "Hide Password" : "Show Password"}</div>
+                </div>
+                <div className="Signup-Btn">
+                    <button id="Signup-Btn" type="button" onClick={onSubmitHandler}>회원가입</button>
+                </div>
             </div>
         </div>
     )

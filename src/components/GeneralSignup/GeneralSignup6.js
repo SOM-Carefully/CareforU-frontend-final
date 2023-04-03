@@ -54,15 +54,17 @@ function GeneralSignup6() {
     }
 
     return (
-        <div className="GeneralSignup-form">
+        <div className="GeneralSignup2-form-wrap">
             <Title title="" />
-            <h1>회원 가입 신청</h1>
-            <h3>회원가입 신청 시 관리자에게 보이는 한 마디를 써주세요(??)</h3>
-            <div id="content">
-                <input type={"text"} name="content" value={content} onChange={onContentHandler}></input>
-            </div>
-            <div className="Signup-Btn">
-                <button id="Signup-Btn" type="button" onClick={onSubmitHandler}>회원가입</button>
+            <div className="GeneralSignup-form">
+                <h1>회원 가입 신청</h1>
+                <h3>회원 가입 신청 시 관리자에게<br/> 하고 싶은 한마디를 적어주세요</h3>
+                <div id="content">
+                    <input type={"text"} name="content" value={content} onChange={onContentHandler}></input>
+                </div>
+                <div className="Signup-Btn">
+                    <button id="Signup-Btn" type="button" onClick={onSubmitHandler}>회원가입</button>
+                </div>
             </div>
         </div>
     )
