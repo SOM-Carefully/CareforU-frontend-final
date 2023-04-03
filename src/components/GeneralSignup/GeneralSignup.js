@@ -22,7 +22,7 @@ function GeneralSignup() {
     return (
         <div className="GeneralSignup-form">
             <h1>휴대폰 번호를 입력해주세요</h1>
-            <h3>회원 가입 시 필수입니다</h3>
+            <h3 id="signupH3">회원 가입 시 필수입니다</h3>
             <div id="phoneNumber">
                 <input type="text" name="phoneNumber" value={phoneNumber} onChange={onPhoneNumberHandler}></input>
             </div>

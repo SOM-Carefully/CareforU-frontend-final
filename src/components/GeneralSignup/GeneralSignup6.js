@@ -58,7 +58,7 @@ function GeneralSignup6() {
             <Title title="" />
             <div className="GeneralSignup-form">
                 <h1>회원 가입 신청</h1>
-                <h3>회원 가입 신청 시 관리자에게<br/> 하고 싶은 한마디를 적어주세요</h3>
+                <h3 id="signupH3">회원 가입 신청 시 관리자에게<br/> 하고 싶은 한마디를 적어주세요</h3>
                 <div id="content">
                     <input type={"text"} name="content" value={content} onChange={onContentHandler}></input>
                 </div>

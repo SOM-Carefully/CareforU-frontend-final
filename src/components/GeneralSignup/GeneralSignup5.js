@@ -29,7 +29,7 @@ function GeneralSignup5() {
             <Title title="" />
             <div className="GeneralSignup-form">
                 <h1>비밀번호를 입력해주세요</h1>
-                <h3>신중하게 입력 바랍니다</h3>
+                <h3 id="signupH3">신중하게 입력 바랍니다</h3>
                 <div id="password">
                     <input type={showPassword ? "text" : "password"} name="password" value={password} onChange={onPasswordHandler}></input>
                 </div>

@@ -18,6 +18,11 @@
   padding-bottom: 10px;
   //background-color: darksalmon;
   margin-left: -40px;
+  cursor: pointer;
+}
+
+.board_list2_container > span{
+  cursor: pointer;
 }
 
 @media(max-width: 600px){

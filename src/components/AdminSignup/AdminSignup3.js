@@ -23,7 +23,7 @@ function AdminSignup3() {
             <Title title=""/>
             <div className="AdminSignup-form">
                 <h1>이메일을 입력해주세요</h1>
-                <h3>회원 가입 시 필수입니다</h3>
+                <h3 id="signupH3">회원 가입 시 필수입니다</h3>
                 <div id="username">
                     <input type="text" name="username" value={username} onChange={onUsernameHandler}></input>
                 </div>

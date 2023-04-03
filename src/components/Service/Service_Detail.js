@@ -199,7 +199,12 @@ function ServiceDetail() {
                             </div> : <div></div>
                     }
                     <h3 id="categoryTitle">첨부파일</h3>
-                    <div id="fileUrl"><a href={content.userFileUrl} download>{content.userFileUrl}</a></div>
+                    <div id="fileUrl">
+                        {content.userFileUrl == '' ?
+                            <p>첨부파일없음</p> :
+                            <a href={content.userFileUrl} download>{content.userFileUrl}</a>
+                        }
+                    </div>
                     <h3 id="categoryTitle">추가요청사항</h3>
                     <div className={"Service_content_box"}>
                         {content.userContent == '' ? '추가 요청 사항 없음' : content.userContent}
