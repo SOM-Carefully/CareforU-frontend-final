@@ -9,6 +9,7 @@ import Board_header2 from "../Board_header2/Board_header2";
 import Board_list2 from "../Board_list2/Board_list2";
 import {Link, useNavigate, useParams} from "react-router-dom";
 import Category from "../Category/Category";
+import Post from "../../pages/post/post";
 function Main(){
     const [content, setContent] = useState('');
     const [freeContent, setFreeContent] = useState('');
@@ -59,10 +60,6 @@ function Main(){
         }).catch((error) => {
             console.log("공지사항을 가져올 수 없습니다.");
         });
-        // console.log(content);
-        // //
-        // setNotice(content.content.slice(0,2));
-        // console.log(notice);
     },[]);
 
 
@@ -72,18 +69,17 @@ function Main(){
             <div className="main_notice_wrap">
                 <h3 onClick={onMoveNotice}>📢     공지사항</h3>
                 <ul>
-                    {content === Object(content)
+                    {content === Object(content) && content.content.length !=0
                         ? content.content.map((content, index) => (
                             <li key={index}>
-
-                                <Link to={`/post/1/${content.postId}`} style={{ textDecoration: 'none', color: "black" }}>
+                                <Link to={`/post/2/${content.postId}`} style={{ textDecoration: 'none', color: "black" }}>
 
                                     <Board_list id={content.postId} num={content.postId} title={content.title} name={content.writer} />
                                 </Link>
 
                             </li>
                         ))
-                        : "등록된 글이 없습니다"}
+                        : <div className="post_x">등록된 글이 없습니다</div>}
                 </ul>
             </div>
             <div className="main_free_wrap">
@@ -93,7 +89,7 @@ function Main(){
                         ? freeContent.content.map((freeContent, index) => (
                             <li key={index}>
 
-                                <Link to={`/post/2/${freeContent.postId}`} style={{ textDecoration: 'none', color: "black" }}>
+                                <Link to={`/post/1/${freeContent.postId}`} style={{ textDecoration: 'none', color: "black" }}>
 
                                     <Board_list id={freeContent.postId} num={freeContent.postId} title={freeContent.title} name={freeContent.writer} />
                                 </Link>
