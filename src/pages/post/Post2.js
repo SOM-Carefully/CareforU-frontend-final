@@ -100,7 +100,7 @@ function Post2(props){
           <img className="userImg" src="/userImg.png"></img>
           <span className="name_date_box">
             <div className="name_date">
-              {/* {content.content[mIdx].writer} */}
+              {props.content.content[idx].writer}
 
             </div>
             <div className="name_date">{props.content.content[idx].createdAt}</div>
