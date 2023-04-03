@@ -9,7 +9,7 @@ function Add_post(props) {
   //console.log("[Add_post.js props:]",props);
   const [postTitle, setPostTitle] = useState("");
   const [postContent, setPostContent] = useState("");
-  const [img, setImg] = useState("");
+  const [imgFile, setImgFile] = useState(null);
   const [modal, setModal]=useState(false);
   const { id } = useParams();
   const navigate = useNavigate();
@@ -32,7 +32,7 @@ function Add_post(props) {
   function post() {
     console.log("제목:", postTitle);
     console.log("내용:", postContent);
-    console.log("2.img:", img);
+  //  console.log("2.img:", img);
     fetch(`http://54.180.210.232:8080/api/v1/posts?category=${id}`, {
       method: "POST",
       headers: {
@@ -42,7 +42,7 @@ function Add_post(props) {
       body: JSON.stringify({
         title: postTitle,
         content: postContent,
-        imgUrl: img[0]
+        imgUrl: imgFile
       }),
     })
       .then((response) => response.json())
@@ -53,6 +53,30 @@ function Add_post(props) {
     post();
     navigate(`/board_list/${id}`);
     alert("게시글이 등록되었습니다!");
+  };
+
+  const handleChange = e => {
+    setImgFile(e.target.files[0]);
+  };
+
+  const handleUpload = async () => {
+    const formData = new FormData();
+    formData.append("file", imgFile);
+
+    try {
+      const response = await fetch("http://54.180.210.232:8080/api/v1/file", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        body: formData,
+      });
+      const imgUrl = await response.json();
+      setImgFile(imgUrl.result[0]);
+    } catch (error) {
+      console.error(error);
+    }
+    setModal(false);
   };
 
 
@@ -80,8 +104,8 @@ function Add_post(props) {
         <div className={modal? "add_img_modal_wrapper":"add_img_modal_wrapper_x"}>
           <div className="x" onClick={() => setModal(false)}>X</div>
           <div className="add_img_wrapper">
-          <input type="file" />
-          <div className="add_btn">첨부</div>
+          <input type="file" onChange={handleChange}/>
+          <div className="add_btn" onClick={handleUpload}>첨부</div>
           </div>
           
         </div>
