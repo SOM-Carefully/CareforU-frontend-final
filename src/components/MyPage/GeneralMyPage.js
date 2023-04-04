@@ -119,10 +119,10 @@ const GeneralMyPage = () => {
                 <div className="profile-info">
                     <div className="profile-name">
                         {profileUrls===null?<img src={profile}/>:<img src={profileUrls}/>}
-                        {nicknames===null?<p>{users} 님</p>:<p>{nicknames} 님</p>}
+                        {nicknames===null?<p id="userNick">{users} 님</p>:<p id="userNick">{nicknames} 님</p>}
                         <p id="role">{levels[roles]}</p>
                     </div>
-                    <div>
+                    <div className="profile-logout-bt">
                         <button type="button" id="logoutBt" onClick={onLogoutHandler}>LOGOUT</button>
                     </div>
                 </div>
@@ -130,13 +130,6 @@ const GeneralMyPage = () => {
                 <div className="profile-service">
                     <h4>서비스 신청 설정</h4>
                     <p id="cursorNeed" onClick={onMoveLookList}>신청 내역 보기</p>
-                    {/*<div className="profile-alarmWrap">*/}
-                    {/*    <p>서비스 매칭 알림</p>*/}
-                    {/*    <label class="switch">*/}
-                    {/*        <input type="checkbox" />*/}
-                    {/*        <span class="slider round"></span>*/}
-                    {/*    </label>*/}
-                    {/*</div>*/}
                 </div>
                 <div className="underBar"></div>
                 <div className="profile-user">
