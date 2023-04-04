@@ -55,6 +55,7 @@ const GeneralMyPage = () => {
         axios.post('http://54.180.210.232:8080/api/v1/logout', formData, {
             headers: {
                 "Content-Type": `multipart/form-data`,
+                Authorization: "Bearer " + token
             }
         }).then((res) => {
             // 로그아웃 성공 시 로그인 페이지로 이동

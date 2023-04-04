@@ -11,6 +11,7 @@ const AdminMyPage = () => {
 
     const navigate = useNavigate();
 
+    const token = localStorage.getItem('accessToken');
     // 문의하기 페이지로 이동
     const onMoveAsk = (e) => {
         // navigate('/ask');
@@ -33,7 +34,6 @@ const AdminMyPage = () => {
     const [nicknames, setNicknames] = useState([]);
     const [profileUrls, setProfileUrls] = useState();
 
-    const token = localStorage.getItem('accessToken');
     const refreshToken = localStorage.getItem('refreshToken');
 
     // 비밀번호 변경 페이지로 이동
@@ -55,6 +55,7 @@ const AdminMyPage = () => {
         axios.post('http://54.180.210.232:8080/api/v1/logout', formData, {
             headers: {
                 "Content-Type": `multipart/form-data`,
+                Authorization: "Bearer " + token
             }
         }).then((res) => {
             // 로그아웃 성공 시 로그인 페이지로 이동
