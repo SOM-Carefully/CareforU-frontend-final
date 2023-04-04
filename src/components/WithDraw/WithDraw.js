@@ -32,7 +32,7 @@ const WithDraw = () => {
                 url: "http://54.180.210.232:8080/api/v1/sign-out",
                 headers: {
                     "Content-Type": "application/json",
-                    Authorization: "Bearer " + localStorage.getItem('token')
+                    Authorization: "Bearer " + token
                 },
                 data: {
                     "password" : Password
@@ -49,8 +49,8 @@ const WithDraw = () => {
         }
     }
     return (
-        <div>
-            <Title title="회원 탈퇴" />
+        <div className="withdraw-top-wrap">
+            <Title title="회원탈퇴"/>
             <div className="withdraw-wrap">
                 <div className="userName">
                     <p>
