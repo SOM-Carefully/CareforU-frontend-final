@@ -127,7 +127,7 @@ const AdminMyPage = () => {
                 <div className="underBar"></div>
                 <div className="profile-andSoOn">
                     <h4>기타</h4>
-                    <p id="cursorNeed" onClick={onMoveBoard}>게시판 관리하기</p>s
+                    <p id="cursorNeed" onClick={onMoveBoard}>게시판 관리하기</p>
                     <p id="cursorNeed" onClick={onMoveAsk}>문의 내역 보기</p>
                     <p id="cursorNeed" onClick={onMoveWithDraw}>탈퇴하기</p>
                 </div>
