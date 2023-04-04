@@ -70,7 +70,7 @@ function Login(){
                 <input id="loginPw" type={showPassword ? "text" : "password"} value={Password} onChange={onPasswordHandler} placeholder="************"></input>
                 <div id="loginSubText">
                     <div onClick={() => setShowPassword(prevState => !prevState)}> {showPassword ? "Hide Password" : "Show Password"}</div>
-                    <div onClick={onMoveForgot}>Forgot Password/id?</div>
+
                 </div>
                 <button id="loginBt" type="button" onClick={onSubmitHandler}>Login</button>
                 <button id="signupBt" type="button" onClick={onMoveSignup}>Sign Up</button>
